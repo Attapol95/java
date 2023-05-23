@@ -1,6 +1,8 @@
 FROM eclipse-temurin:17.0.6_10-jdk-alpine as step1
 WORKDIR /app
 COPY . .
+RUN pwd
+RUN ls -ltr
 RUN mvnw package
 
 FROM eclipse-temurin:17.0.6_10-jre-alpine
