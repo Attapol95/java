@@ -1,0 +1,6 @@
+version: "3"
+services:
+  service1:
+    image: ibas08/demo:3.0
+    ports: 
+     - "8888:8080"

@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('1. Pull code') {
+            steps {
+               git branch: 'main', url: 'https://github.com/Attapol95/workshop-spring-docker-k8s-202305.git'
+            }
+        }
+        stage('2. Compile') {
+            steps {
+              bat '''cd hello
+              mvnw compile'''
+            }
+        }
+    }
+}

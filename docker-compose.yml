@@ -1,0 +1,9 @@
+version: "3"
+services:
+  service1:
+    build: 
+      context: ./hello
+      dockerfile: Dockerfile_multi_stage
+    image: ibas08/demo:3.0
+    ports: 
+     - "8888:8080"
